@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quickmap"
+version = "0.1.0"
+description = "One-liner map generation for shareable GeoJSON visualizations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "folium>=0.17.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.0,<9.0.0",
+    "pytest-cov>=5.0.0,<6.0.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=quickmap --cov-report=term-missing --cov-fail-under=100"
+
