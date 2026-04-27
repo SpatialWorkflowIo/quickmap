@@ -5,11 +5,13 @@ on:
     branches: ["main"]
   pull_request:
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     steps:
       - name: Checkout
@@ -30,14 +32,14 @@ jobs:
           pytest --cov=quickmap --cov-report=term-missing --cov-report=xml --cov-fail-under=100
 
       - name: Upload coverage to Codecov
-        if: ${{ env.CODECOV_TOKEN != '' }}
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: codecov/codecov-action@v5
         with:
           files: ./coverage.xml
-          token: ${{ env.CODECOV_TOKEN }}
+          use_oidc: true
           fail_ci_if_error: true
 
-      - name: Skip Codecov upload (missing token)
-        if: ${{ env.CODECOV_TOKEN == '' }}
-        run: echo "CODECOV_TOKEN is not configured. Skipping coverage upload."
+      - name: Skip Codecov upload for non-main events
+        if: ${{ github.event_name != 'push' || github.ref != 'refs/heads/main' }}
+        run: echo "Codecov upload only runs on pushes to main."
 
