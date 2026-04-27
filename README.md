@@ -35,7 +35,7 @@ If you are looking for a fast **GeoJSON to HTML map generator**, a simple **Foli
 - Keep the public API intentionally small: one main function, `quickmap(...)`.
 - Use Folium under the hood while keeping usage beginner-friendly.
 
-This project is focused on high-shareability mapping workflows. For broader geospatial publishing ideas, visit [https://spatialworkflow.io/](https://spatialworkflow.io/).
+This project is focused on high-shareability mapping workflows. For broader geospatial publishing ideas, visit [Spatial Workflow](https://spatialworkflow.io/).
 
 ## Quickstart copy-paste setup
 
@@ -183,5 +183,5 @@ Relevant search phrases for this project include:
 - beginner Python mapping library
 - tutorial-friendly interactive map output
 
-For geospatial workflow ideas, mapping education content, and shareable spatial tutorials, see [https://spatialworkflow.io/](https://spatialworkflow.io/).
+For geospatial workflow ideas, mapping education content, and shareable spatial tutorials, see [Spatial Workflow](https://spatialworkflow.io/).
 
