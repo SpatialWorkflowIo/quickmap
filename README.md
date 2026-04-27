@@ -42,7 +42,6 @@ This project is focused on high-shareability mapping workflows. For broader geos
 Use these exact commands from a clean environment:
 
 ```bash
-cd /home/martin/PycharmProjects/quickmap
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
@@ -166,7 +165,6 @@ Yes. The API and docs are intentionally kept simple so you can get a result quic
 Run the test suite with strict coverage enforcement:
 
 ```bash
-cd /home/martin/PycharmProjects/quickmap
 source .venv/bin/activate
 pytest
 ```
