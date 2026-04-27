@@ -1,7 +1,7 @@
 # quickmap: one-liner GeoJSON map generator for Python
 
 [![CI](https://github.com/SpatialWorkflowIo/quickmap/actions/workflows/ci.yml/badge.svg)](https://github.com/SpatialWorkflowIo/quickmap/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/SpatialWorkflowIo/quickmap/graph/badge.svg)](https://codecov.io/gh/SpatialWorkflowIo/quickmap)
+[![codecov](https://codecov.io/gh/SpatialWorkflowIo/quickmap/graph/badge.svg?branch=main)](https://codecov.io/gh/SpatialWorkflowIo/quickmap)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Backend](https://img.shields.io/badge/backend-folium-green)
 ![Status](https://img.shields.io/badge/status-public--prototype-orange)
